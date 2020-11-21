@@ -24,8 +24,14 @@ public final class Constants {
     public static final int BackRightMotorPort = 3;
     
     //PWM Ports
+	public static final int IntakeMotorPort = 0;
+	
+    //PCM Ports
+    public static final int IntakePistonUp = 0;
+    public static final int IntakePistonDown = 1;
 
     //Constants
+	public static final int xboxPort = 0;
 
     //Variables
 

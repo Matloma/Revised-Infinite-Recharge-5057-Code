@@ -26,6 +26,8 @@ public class Robot extends TimedRobot {
 
   public DriveTrain driveTrain;
 
+  public Intake intake;
+
   public XboxController xbox;
 
   /**
@@ -40,7 +42,9 @@ public class Robot extends TimedRobot {
 
     driveTrain = new DriveTrain();
 
-    xbox = new XboxController(0);
+    intake = new Intake();
+
+    xbox = new XboxController(Constants.xboxPort);
   }
 
   /**
@@ -107,6 +111,7 @@ public class Robot extends TimedRobot {
   @Override
   public void teleopPeriodic() {
     driveTrain.driveXbox(xbox);
+    intake.intakeXbox(xbox);
   }
 
   @Override
